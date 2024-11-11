@@ -5,14 +5,29 @@
     --secondary-text: #232738;
     --primary-collor: #3a435d;
     --accent-color: #0071ff;
+    --card-color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: poppins;
+}
+body{ 
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+
 }
 .darkmode{
-    --base-color: #070b1d;
+    --base-color: #060815;
     --base-variant: #101425;
     --text-color: #ffffff;
     --secondary-text: #a4a5b8;
     --primary-collor: #3a435d;
     --accent-color: #0071ff;
+    --card-color: #111528;
 }
 #theme-switch{
     height: 50px;
@@ -29,12 +44,27 @@
 }
 #theme-switch svg{
     fill: var(--primary-collor);
-
 }
 #theme-switch svg:last-child{
     display: none;
 }
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
 .darkmode #theme-switch svg:last-child{
     display: block;
-    
 }
+
+.card {
+    background-color: var(--card-color); /* Cor de fundo */
+    color: var(--text-color); /* Cor do texto */
+    border: 1px solid #ddd; /* Cor da borda */
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+  
+  /* Para dark mode */
+  .card.darkmode {
+    background-color: #333;
+    color: var(--text-color);
+    border: 1px solid #555;
+  }
