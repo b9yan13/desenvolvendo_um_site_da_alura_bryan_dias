@@ -1,0 +1,69 @@
+:root{
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-collor: #3a435d;
+    --accent-color: #0071ff;
+    --card-color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: poppins;
+}
+body{ 
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+
+}
+.darkmode{
+    --base-color: #060815;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-collor: #3a435d;
+    --accent-color: #0071ff;
+    --card-color: #111528;
+}
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+#theme-switch svg{
+    fill: var(--primary-collor);
+}
+#theme-switch svg:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+.card {
+    background-color: var(--card-color); /* Cor de fundo */
+    color: var(--text-color); /* Cor do texto */
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+  
+  /* Para dark mode */
+  .card.darkmode {
+    background-color: #333;
+    color: var(--text-color);
+  }
+  

@@ -1,0 +1,97 @@
+/* Estilo para o container do slider */
+section.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo para o conteúdo do slider (as imagens) */
+.slider-content {
+    width: 400%;  /* 4 slides, cada um ocupa 25% */
+    height: auto;
+    display: flex;
+    transition: transform 1s ease;  /* Transição suave */
+}
+
+/* Cada slide do carrossel */
+.slide-box {
+    width: 25%;  /* Cada slide ocupa 25% da largura total */
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+
+/* Esconde os inputs do tipo rádio */
+.slider-content input {
+    display: none;
+}
+
+/* Estilo para os botões de navegação manual */
+.nav-manual {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+.nav-manual .manual-btn {
+    border: 1px solid #ff0054;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover {
+    background-color: #ff0054;
+}
+
+/* Estilo para os botões automáticos de navegação */
+.nav-auto {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+.nav-auto div {
+    border: 1px solid #ff0054;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-auto div:hover {
+    background-color: #ff0054;
+}
+
+/* Estilo para quando o botão de navegação manual é ativado */
+#radio1:checked ~ .slider .slider-content {
+    transform: translateX(0%);  /* Exibe o primeiro slide */
+}
+
+#radio2:checked ~ .slider .slider-content {
+    transform: translateX(-25%);  /* Exibe o segundo slide */
+}
+
+#radio3:checked ~ .slider .slider-content {
+    transform: translateX(-50%);  /* Exibe o terceiro slide */
+}
+
+#radio4:checked ~ .slider .slider-content {
+    transform: translateX(-75%);  /* Exibe o quarto slide */
+}
